@@ -1,0 +1,23 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "Automated software testing with pupetteer",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --timeout=30000 ./tests"
+  },
+  "keywords": [
+    "Puppetteer",
+    "Mocha",
+    "Chai",
+    "Automation"
+  ],
+  "author": "MF",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
+    "prettier": "^2.2.1",
+    "puppeteer": "^8.0.0"
+  }
+}
