@@ -27,6 +27,11 @@ describe('My First Puppeteer Test', () => {
 		expect(url).to.include('example.com')
 		expect(text).to.be.a('string', 'Example Domain')
 		expect(count).to.equal(2)
+
+		await page.goto('http://zero.webappsecurity.com/index.html')
+		await page.waitForSelector('#signin_button')
+		await page.click('#signin_button')
+		await page.waitFor(() => !document.querySelector('#signin_button'))
 		await browser.close()
 	})
 })
