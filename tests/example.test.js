@@ -11,9 +11,9 @@ describe('My First Puppeteer Test', () => {
 		const page = await browser.newPage()
 		await page.setDefaultTimeout(10000)
 		await page.setDefaultNavigationTimeout(20000)
-		await page.goto('https://dev.to')
 
 		await page.goto('https://example.com/')
+		await page.waitForXPath('//h1')
 		const title = await page.title()
 		const url = await page.url()
 		const text = await page.$eval('h1', element => element.textContent)
